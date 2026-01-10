@@ -492,6 +492,20 @@ Mudança para não cortar a imagem do hero
   flex-wrap: wrap;
 }
 
+/* Icone do whatsapp */
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  /* color: #0cbd1b; */
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.icon-btn:hover .icon {
+  opacity: 1;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero__grid,
