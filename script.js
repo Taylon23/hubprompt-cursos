@@ -62,11 +62,11 @@ if (burger && nav) {
 // =========================
 const DATA = {
   saoluis: {
-    hero: "#",
+    hero: "./assets/banner_saoluis.jpg",
     covers: {
-      ia: "./assets/sl/capa-ia.jpg",
-      app: "./assets/sl/capa-app.jpg",
-      wa: "./assets/sl/capa-wa.jpg",
+      ia: "./assets/turma_img3.jpeg",
+      app: "./assets/turma_img2.jpeg",
+      wa: "./assets/ruema_img4.jpeg",
     },
     turmas: [
       "./assets/turma_img1.jpeg",
@@ -81,15 +81,15 @@ const DATA = {
   },
 
   teresina: {
-    hero: "#",
+    hero: "./assets/banner_teresina.jpg",
     covers: {
-      ia: "./assets/the/capa-ia.jpg",
-      app: "./assets/the/capa-app.jpg",
-      wa: "./assets/the/capa-wa.jpg",
+      ia: "./assets/turma_img5.jpeg",
+      app: "./assets/turma_img1.jpeg",
+      wa: "./assets/turma_img4.jpeg",
     },
     turmas: [
       "./assets/turma_img4.jpeg",
-      "./assets/turma_img5.jpeg",
+      "./assets/turma_img1.jpeg",
       "./assets/turma_img6.jpeg",
     ],
     links: {
@@ -183,7 +183,7 @@ function setImage(imgEl, placeholderEl, src, altText) {
 
   imgEl.onload = () => {
     imgEl.classList.remove("is-hidden");
-    placeholderEl.classList.add("is-hidden");
+    // placeholderEl.classList.add("is-hidden");
   };
 
   imgEl.onerror = () => {
