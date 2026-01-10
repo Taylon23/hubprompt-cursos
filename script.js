@@ -62,16 +62,16 @@ if (burger && nav) {
 // =========================
 const DATA = {
   saoluis: {
-    hero: "./assets/sl/hero.jpg",
+    hero: "#",
     covers: {
       ia: "./assets/sl/capa-ia.jpg",
       app: "./assets/sl/capa-app.jpg",
       wa: "./assets/sl/capa-wa.jpg",
     },
     turmas: [
-      "./assets/sl/turma-01.jpg",
-      "./assets/sl/turma-02.jpg",
-      "./assets/sl/turma-03.jpg",
+      "./assets/turma_img1.jpeg",
+      "./assets/turma_img2.jpeg",
+      "./assets/turma_img3.jpeg",
     ],
     links: {
       ia: "https://pay.hotmart.com/J102529429C?off=su4w0yun",
@@ -81,13 +81,17 @@ const DATA = {
   },
 
   teresina: {
-    hero: "./assets/the/hero.jpg",
+    hero: "#",
     covers: {
       ia: "./assets/the/capa-ia.jpg",
       app: "./assets/the/capa-app.jpg",
       wa: "./assets/the/capa-wa.jpg",
     },
-    turmas: ["./assets/the/turma-01.jpg", "./assets/the/turma-02.jpg"],
+    turmas: [
+      "./assets/turma_img4.jpeg",
+      "./assets/turma_img5.jpeg",
+      "./assets/turma_img6.jpeg",
+    ],
     links: {
       ia: "https://pay.hotmart.com/H103769547I?off=g147l2bx",
       app: "https://pay.hotmart.com/E103771846I?off=3do6cm2v",
