@@ -74,9 +74,9 @@ const DATA = {
       "./assets/turma_img3.jpeg",
     ],
     links: {
-      ia: "https://pay.hotmart.com/J102529429C?off=su4w0yun",
-      app: "https://pay.hotmart.com/H103771685V?off=p0j16au3",
-      wa: "https://pay.hotmart.com/I103769714Y?off=kmp0b124",
+      ia: "https://pay.hotmart.com/J102529429C?off=gf60h6z6",
+      app: "https://pay.hotmart.com/H103771685V?off=0nzw0nmi",
+      wa: "https://pay.hotmart.com/I103769714Y?off=s8aoa7wg",
     },
   },
 
@@ -93,9 +93,9 @@ const DATA = {
       "./assets/turma_img6.jpeg",
     ],
     links: {
-      ia: "https://pay.hotmart.com/H103769547I?off=g147l2bx",
-      app: "https://pay.hotmart.com/E103771846I?off=3do6cm2v",
-      wa: "https://pay.hotmart.com/J103771597F?off=f6toljrl",
+      ia: "https://pay.hotmart.com/H103769547I?off=ulhlek2p",
+      app: "https://pay.hotmart.com/E103771846I?off=nrd81r68",
+      wa: "https://pay.hotmart.com/J103771597F?off=rz8qwb9x",
     },
   },
 
