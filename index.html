@@ -1,284 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HubPrompt • Cursos Presenciais</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HubPrompt • Cursos Presenciais</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
-  <!-- Topbar -->
-  <header class="topbar" id="topo">
-    <div class="container topbar__inner">
-      <a class="brand" href="#topo">
-        <img src="./assets/0001.png" width="150px" alt="HubPrompt">
-      </a>
+  <body>
+    <!-- Topbar -->
+    <header class="topbar" id="topo">
+      <div class="container topbar__inner">
+        <a class="brand" href="#topo">
+          <img src="./assets/0001.png" width="150px" alt="HubPrompt" />
+        </a>
 
-      <nav class="nav" id="navMenu">
-        <a class="nav__link" href="#curso-ia">IA na Prática</a>
-        <a class="nav__link" href="#curso-app">Curso de App</a>
-        <a class="nav__link" href="#curso-wa">Automação WhatsApp</a>
-        <a class="nav__cta" href="#turmas">Turmas</a>
-      </nav>
+        <nav class="nav" id="navMenu">
+          <a class="nav__link" href="#curso-ia">IA na Prática</a>
+          <a class="nav__link" id="nav-prof" href="#curso-professor"
+            >Professor IA na Prática</a
+          >
+          <a class="nav__cta" href="#turmas">Turmas</a>
+        </nav>
 
-      <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <p class="pill">Presencial • Prático • Resultado</p>
-          <h1>Cursos de IA para quem quer operar — não só “testar ferramenta”.</h1>
-          <p class="lead">
-            Três trilhas: <strong>IA na Prática</strong>, <strong>App com IA</strong> e
-            <strong>Automação de WhatsApp</strong>. Você sai com estrutura e aplicação real.
-          </p>
-
-          <!-- ✅ Seleção de cidade (controla textos e imagens) -->
-          <div class="city">
-            <p class="city__label">Escolha sua cidade:</p>
-
-            <div class="city__options" role="tablist" aria-label="Seleção de cidade">
-              <button class="city__btn" type="button" data-city-select="saoluis" role="tab" aria-selected="false">
-                São Luís
-              </button>
-              <button class="city__btn" type="button" data-city-select="teresina" role="tab" aria-selected="false">
-                Teresina
-              </button>
-              <button class="city__btn" type="button" data-city-select="fortaleza" role="tab" aria-selected="false">
-                Fortaleza
-              </button>
-            </div>
-
-            <p class="city__hint muted">
-              Mostrando informações de <strong data-city-name></strong>.
-            </p>
-          </div>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#cursos">Ver cursos</a>
-            <a class="btn btn--ghost" href="#turmas">Ver turmas passadas</a>
-          </div>
-
-          <div class="hero__stats">
-            <div class="stat">
-              <span class="stat__num">+100</span>
-              <span class="stat__label">alunos (ex.)</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">3</span>
-              <span class="stat__label">cursos presenciais</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">3</span>
-              <span class="stat__label">cidades</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Hero image (pode variar por cidade também, se quiser) -->
-        <div class="hero__media">
-          <div class="img-placeholder img-placeholder--hero" id="heroPlaceholder">
-            <span>Imagem Hero (opcional por cidade)</span>
-          </div>
-          <img class="img-real is-hidden" id="heroImg" alt="Turma HubPrompt">
-        </div>
+        <button
+          class="nav__burger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <!-- Cursos -->
-    <section class="section" id="cursos">
-      <div class="container">
-        <div class="section__head">
-          <h2>Cursos disponíveis</h2>
-          <p class="muted">O curso é o mesmo — o que muda é a cidade e as turmas.</p>
-        </div>
-
-        <!-- Curso 1 -->
-        <article class="course" id="curso-ia">
-          <div class="course__media">
-            <div class="img-placeholder" id="ph-ia">
-              <span>Imagem do curso IA na Prática (capa)</span>
-            </div>
-            <img class="img-real is-hidden" id="img-ia" alt="Capa do curso IA na Prática">
-          </div>
-
-          <div class="course__content">
-            <p class="course__tag">Nível 1 • Base & produtividade</p>
-            <h3>IA na Prática</h3>
-            <p class="course__cityline" data-course-cityline="ia"></p>
-            <p>
-              Um mergulho direto na aplicação de IA no dia a dia: organização, produtividade,
-              criação de assistentes e rotinas que economizam tempo (de verdade).
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="pill">Presencial • Prático • Resultado</p>
+            <h1>Cursos de IA para quem quer operar — não só “testar ferramenta”.</h1>
+            <p class="lead">
+              Duas trilhas:
+              <strong>IA na Prática</strong> e
+              <strong>Professor IA na Prática</strong>. Você sai com estrutura e
+              aplicação real.
             </p>
 
-            <ul class="bullets">
-              <li>Fundamentos + boas práticas</li>
-              <li>Prompts com lógica de negócio</li>
-              <li>Aplicações imediatas no trabalho</li>
-            </ul>
+            <!-- ✅ Seleção de cidade -->
+            <div class="city">
+              <p class="city__label">Escolha sua cidade:</p>
 
-            <div class="course__actions">
-              <a class="btn btn--primary" id="link-ia" href="" target="_blank" rel="noopener">Ver mais</a>
+              <div
+                class="city__options"
+                role="tablist"
+                aria-label="Seleção de cidade"
+              >
+                <button
+                  class="city__btn"
+                  type="button"
+                  data-city-select="saoluis"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  São Luís
+                </button>
+
+                <button
+                  class="city__btn"
+                  type="button"
+                  data-city-select="teresina"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Teresina
+                </button>
+
+                <button
+                  class="city__btn"
+                  type="button"
+                  data-city-select="fortaleza"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Fortaleza
+                </button>
+              </div>
+
+              <p class="city__hint muted">
+                Mostrando informações de <strong data-city-name></strong>.
+              </p>
+            </div>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#cursos">Ver cursos</a>
               <a class="btn btn--ghost" href="#turmas">Ver fotos de turmas</a>
             </div>
-          </div>
-        </article>
 
-        <!-- Curso 2 -->
-        <article class="course course--reverse" id="curso-app">
-          <div class="course__media">
-            <div class="img-placeholder" id="ph-app">
-              <span>Imagem do curso de App (capa)</span>
-            </div>
-            <img class="img-real is-hidden" id="img-app" alt="Capa do curso de App com IA">
-          </div>
-
-          <div class="course__content">
-            <p class="course__tag">Nível 2 • Estrutura & escala</p>
-            <h3>Curso de App com IA</h3>
-            <p class="course__cityline" data-course-cityline="app"></p>
-            <p>
-              Para quem quer sair do “meu processo tá no WhatsApp e planilha” e virar o jogo com um app:
-              cadastro, painel, fluxo, acompanhamento, operação enxuta.
-            </p>
-
-            <ul class="bullets">
-              <li>Modelagem de processo (antes do app)</li>
-              <li>Telas, dados e lógica de uso</li>
-              <li>Aplicações por área (negócio/serviço)</li>
-            </ul>
-
-            <div class="course__actions">
-              <a class="btn btn--primary" id="link-ia" href="" target="_blank" rel="noopener">Ver mais</a>
-
-              <a class="btn btn--ghost" href="#turmas">Ver fotos de turmas</a>
+            <div class="hero__stats">
+              <div class="stat">
+                <span class="stat__num">+100</span>
+                <span class="stat__label">alunos (ex.)</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">2</span>
+                <span class="stat__label">cursos presenciais</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">3</span>
+                <span class="stat__label">cidades</span>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Curso 3 -->
-        <article class="course" id="curso-wa">
-          <div class="course__media">
-            <div class="img-placeholder" id="ph-wa">
-              <span>Imagem do curso de Automação WhatsApp (capa)</span>
+          <!-- Hero image -->
+          <div class="hero__media">
+            <div
+              class="img-placeholder img-placeholder--hero"
+              id="heroPlaceholder"
+            >
+              <span>Imagem Hero (opcional por cidade)</span>
             </div>
-            <img class="img-real is-hidden" id="img-wa" alt="Capa do curso Automação de WhatsApp">
+            <img
+              class="img-real is-hidden"
+              id="heroImg"
+              alt="Turma HubPrompt"
+            />
           </div>
-
-          <div class="course__content">
-            <p class="course__tag">Nível 2 • Atendimento & conversão</p>
-            <h3>Automação de WhatsApp</h3>
-            <p class="course__cityline" data-course-cityline="wa"></p>
-            <p>
-              Estruture atendimento, triagem, organização e follow-up no WhatsApp. Menos caos,
-              mais processo — e sem virar refém de “mensagem repetida”.
-            </p>
-
-            <ul class="bullets">
-              <li>Fluxos: boas-vindas, qualificação, encaminhamento</li>
-              <li>Organização (CRM/etiquetas/painéis)</li>
-              <li>Padrão de atendimento com consistência</li>
-            </ul>
-
-            <div class="course__actions">
-              <a class="btn btn--primary" id="link-ia" href="" target="_blank" rel="noopener">Ver mais</a>
-              <a class="btn btn--ghost" href="#turmas">Ver fotos de turmas</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Turmas (carrossel por cidade via JS) -->
-    <section class="section section--alt" id="turmas">
-      <div class="container">
-        <div class="section__head">
-          <h2>Turmas passadas</h2>
-          <p class="muted">As fotos mudam conforme a cidade selecionada.</p>
         </div>
+      </section>
 
-        <div class="carousel" data-carousel>
-          <button class="carousel__btn" data-prev aria-label="Imagem anterior">‹</button>
-
-          <div class="carousel__viewport">
-            <div class="carousel__track" data-track>
-              <!-- slides serão gerados via JS -->
-            </div>
-          </div>
-
-          <button class="carousel__btn" data-next aria-label="Próxima imagem">›</button>
-        </div>
-
-        <div class="carousel__dots" data-dots></div>
-
-        <div class="empty empty--small" data-empty-turmas>
-          <p class="muted">Sem fotos cadastradas para esta cidade (ainda). 😉</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA final -->
-    <section class="section">
-      <div class="container cta">
-        <div class="cta__box">
-          <div>
-            <h2>Quer saber qual curso é o seu?</h2>
+      <!-- Cursos -->
+      <section class="section" id="cursos">
+        <div class="container">
+          <div class="section__head">
+            <h2>Cursos disponíveis</h2>
             <p class="muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+              O curso é o mesmo — o que muda é a cidade e as turmas.
             </p>
           </div>
-          <a class="btn btn--primary" href="#">Falar com a equipe</a>
+
+          <!-- Curso 1 -->
+          <article class="course" id="curso-ia">
+            <div class="course__media">
+              <div class="img-placeholder" id="ph-ia">
+                <span>Imagem do curso IA na Prática (capa)</span>
+              </div>
+              <img
+                class="img-real is-hidden"
+                id="img-ia"
+                alt="Capa do curso IA na Prática"
+              />
+            </div>
+
+            <div class="course__content">
+              <p class="course__tag">Nível 1 • Base & produtividade</p>
+              <h3>IA na Prática (Funcionário Digital)</h3>
+              <p class="course__cityline" data-course-cityline="ia"></p>
+
+              <p>
+                Aprenda, mesmo sem nenhuma experiência, a criar seu próprio
+                assistente digital inteligente para executar tarefas no seu
+                lugar. Em um dia de imersão, você sai do zero com um funcionário
+                digital pronto para aumentar sua produtividade.
+              </p>
+
+              <ul class="bullets">
+                <li>Introdução à IA e ChatGPT</li>
+                <li>Engenharia de Prompt + Criação de Assistentes</li>
+                <li>Aplicações reais com orientação prática</li>
+              </ul>
+
+              <div class="course__actions">
+                <a
+                  class="btn btn--primary"
+                  id="link-ia"
+                  href=""
+                  target="_blank"
+                  rel="noopener"
+                  >Inscrever-se</a
+                >
+                <a class="btn btn--ghost" href="#turmas">Ver fotos de turmas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Curso 2 -->
+          <article class="course course--reverse" id="curso-professor">
+            <div class="course__media">
+              <div class="img-placeholder" id="ph-prof">
+                <span>Imagem do curso Professor IA na Prática (capa)</span>
+              </div>
+              <img
+                class="img-real is-hidden"
+                id="img-prof"
+                alt="Capa do curso Professor IA na Prática"
+              />
+            </div>
+
+            <div class="course__content">
+              <p class="course__tag">Nível 2 • Estrutura & aplicação pedagógica</p>
+              <h3>Professor IA na Prática</h3>
+              <p class="course__cityline" data-course-cityline="prof"></p>
+
+              <p>
+                Metodologia ativa e gamificada, com foco em prática.
+                Você aprende a usar IA para planejamento, produção de materiais
+                didáticos e organização docente — com aplicação imediata.
+              </p>
+
+              <ul class="bullets">
+                <li>Fundamentos de IA para educadores</li>
+                <li>Engenharia de Prompts aplicada à docência</li>
+                <li>Planejamento com IA</li>
+                <li>Produção prática de materiais didáticos</li>
+                <li>Orientação e ajustes no seu caso real</li>
+              </ul>
+
+              <div class="course__actions">
+                <a
+                  class="btn btn--primary"
+                  id="link-prof"
+                  href=""
+                  target="_blank"
+                  rel="noopener"
+                  >Inscrever-se</a
+                >
+                <a class="btn btn--ghost" href="#turmas">Ver fotos de turmas</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Turmas -->
+      <section class="section section--alt" id="turmas">
+        <div class="container">
+          <div class="section__head">
+            <h2>Turmas passadas</h2>
+          </div>
+
+          <div class="carousel" data-carousel>
+            <button class="carousel__btn" data-prev aria-label="Imagem anterior">
+              ‹
+            </button>
+
+            <div class="carousel__viewport">
+              <div class="carousel__track" data-track></div>
+            </div>
+
+            <button class="carousel__btn" data-next aria-label="Próxima imagem">
+              ›
+            </button>
+          </div>
+
+          <div class="carousel__dots" data-dots></div>
+
+          <div class="empty empty--small" data-empty-turmas>
+            <p class="muted">Sem fotos cadastradas para esta cidade (ainda). 😉</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA final -->
+      <section class="section">
+        <div class="container cta">
+          <div class="cta__box">
+            <div>
+              <h2>Quer saber qual curso é o seu?</h2>
+              <p class="muted">Clica no botão e fala com a gente no WhatsApp.</p>
+            </div>
+
+            <a
+              class="btn btn--primary"
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/5598984593167?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20imers%C3%A3o%2C%20gostaria%20de%20saber%20mais."
+              >Falar no WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="brand brand--footer">
+            <img src="./assets/0001.png" width="100px" alt="HubPrompt" />
+          </div>
+          <p class="muted"></p>
+        </div>
+
+        <div>
+          <h4>Links</h4>
+          <ul class="footer__links">
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#turmas">Turmas</a></li>
+            <li><a href="#topo">Topo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <ul class="footer__links">
+            <li>
+              <strong>Telefone / WhatsApp:</strong><br />
+              <a
+                href="https://wa.me/559892294009?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20imers%C3%A3o%2C%20gostaria%20de%20saber%20mais."
+                target="_blank"
+                rel="noopener"
+              >
+                +55 (98) 984593167
+              </a>
+            </li>
+
+            <li>
+              <strong>Endereço:</strong><br />
+              Av. dos Holandeses 6, sala 6 – Aracagy<br />
+              São Luís/MA
+            </li>
+
+            <li>
+              <strong>CNPJ:</strong><br />
+              26.584.959/0001-05
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <div class="brand brand--footer">
-         <img src="./assets/0001.png" width="100px" alt="HubPrompt">
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <span>© <span id="year"></span> HubPrompt. Todos os direitos reservados.</span>
+          <span class="muted">Feito com processo. E café. ☕</span>
         </div>
-        <p class="muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-        </p>
       </div>
+    </footer>
 
-      <div>
-        <h4>Links</h4>
-        <ul class="footer__links">
-          <li><a href="#cursos">Cursos</a></li>
-          <li><a href="#turmas">Turmas</a></li>
-          <li><a href="#topo">Topo</a></li>
-        </ul>
-      </div>
+    <!-- WhatsApp flutuante -->
+    <a
+      class="wa-float"
+      href="https://wa.me/5598984593167?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20imers%C3%A3o%2C%20gostaria%20de%20saber%20mais."
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+      title="Falar no WhatsApp"
+    >
+      <svg class="wa-float__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
+    </a>
 
-      <div>
-        <h4>Contato</h4>
-        <ul class="footer__links">
-          <li><a href="#">WhatsApp</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">E-mail</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <span>© <span id="year"></span> HubPrompt. Todos os direitos reservados.</span>
-        <span class="muted">Feito com processo. E café. ☕</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
