@@ -113,7 +113,7 @@ const DATA = {
       "./assets/for/turma-04.jpg",
     ],
     links: {
-      ia: "https://SEU-LINK-AQUI/fortaleza/ia-na-pratica",
+      ia: "https://pay.hotmart.com/D104266233X?off=jk5niv0b",
       app: "https://SEU-LINK-AQUI/fortaleza/curso-app",
       wa: "https://SEU-LINK-AQUI/fortaleza/automacao-whatsapp",
     },
