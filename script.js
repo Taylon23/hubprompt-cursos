@@ -45,7 +45,7 @@ const DATA = {
       "./assets/sl/turma-03.jpg",
     ],
     links: {
-      ia: "https://SEU-LINK-AQUI/sl/ia-na-pratica",
+      ia: "https://pay.hotmart.com/J102529429C?off=u1dn6lqr%22&bid=1770738742261",
       app: "https://SEU-LINK-AQUI/sl/curso-app",
       wa: "https://SEU-LINK-AQUI/sl/automacao-whatsapp",
     }
@@ -63,7 +63,7 @@ const DATA = {
       "./assets/the/turma-02.jpg",
     ],
     links: {
-      ia: "https://SEU-LINK-AQUI/teresina/ia-na-pratica",
+      ia: "https://pay.hotmart.com/H103769547I?off=sjlxt6zu",
       app: "https://SEU-LINK-AQUI/teresina/curso-app",
       wa: "https://SEU-LINK-AQUI/teresina/automacao-whatsapp",
     }
@@ -83,7 +83,7 @@ const DATA = {
       "./assets/for/turma-04.jpg",
     ],
     links: {
-      ia: "https://SEU-LINK-AQUI/fortaleza/ia-na-pratica",
+      ia: "https://pay.hotmart.com/D104266233X?off=jk5niv0b%22&bid=1770738852362",
       app: "https://SEU-LINK-AQUI/fortaleza/curso-app",
       wa: "https://SEU-LINK-AQUI/fortaleza/automacao-whatsapp",
     }
