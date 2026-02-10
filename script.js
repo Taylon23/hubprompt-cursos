@@ -9,7 +9,7 @@ function cityLabel(city) {
     saoluis: {
       name: "São Luís",
       address: "Hotel PraiaBella, Av. Litorânea, 46 – Calhau",
-      date_ia: "24/01/2026",
+      date_ia: "29/03/2026",
       date_prof: null, // NÃO TEM
     },
     teresina: {
@@ -21,7 +21,7 @@ function cityLabel(city) {
     },
     fortaleza: {
       name: "Fortaleza",
-      address: "Av. Beira-Mar, 900",
+      address: "Ninna Hub, Av. Dom Manuel, 1020 - Centro, Fortaleza - CE",
       date_ia: "20/03/2026",
       date_prof: "21/03/2026",
     },
