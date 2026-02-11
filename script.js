@@ -9,7 +9,7 @@ function cityLabel(city) {
     saoluis: {
       name: "São Luís",
       address: "Hotel PraiaBella, Av. Litorânea, 46 – Calhau",
-      date_ia: "29/03/2026",
+      date_ia: "28/03/2026",
       date_prof: null, // NÃO TEM
     },
     teresina: {
@@ -61,10 +61,10 @@ const DATA = {
       prof: null, // não usa
     },
     turmas: [
+      "./assets/turma_img1.jpeg",
       "./assets/WhatsApp Image 2026-02-10 at 12.48.55.jpeg",
       "./assets/WhatsApp Image 2026-02-10 at 12.48.56.jpeg",
-      "./assets/turma_img2.jpeg",
-      "./assets/turma_img1.jpeg",
+      "./assets/turma_img2.jpeg", 
     ],
     links: {
       ia: "https://pay.hotmart.com/J102529429C?off=u1dn6lqr",
