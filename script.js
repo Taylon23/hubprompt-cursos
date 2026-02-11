@@ -10,7 +10,7 @@ function cityLabel(city) {
       name: "São Luís",
       address: "Hotel PraiaBella, Av. Litorânea, 46 – Calhau",
       date_ia: "28/03/2026",
-      date_prof: null, // NÃO TEM
+      date_prof: "29/03/2026",
     },
     teresina: {
       name: "Teresina",
@@ -54,36 +54,38 @@ if (burger && nav) {
 // =========================
 const DATA = {
   saoluis: {
-    onlyIA: true, // 👈 regra: São Luís só tem IA na prática
-    hero: "./assets/WhatsApp Image 2026-02-10 at 12.48.58.jpeg",
+    onlyIA: false,
+    hero: "./assets/banner_saoluis.jpg",
     covers: {
-      ia: "./assets/WhatsApp Image 2026-02-10 at 12.49.24 (1).jpeg",
-      prof: null, // não usa
+      ia: "./assets/turma_img7.jpeg",
+      prof: "./assets/turma_img11.jpeg",
     },
     turmas: [
       "./assets/turma_img1.jpeg",
       "./assets/WhatsApp Image 2026-02-10 at 12.48.55.jpeg",
       "./assets/WhatsApp Image 2026-02-10 at 12.48.56.jpeg",
-      "./assets/turma_img2.jpeg", 
+      "./assets/turma_img2.jpeg",
+      "./assets/WhatsApp Image 2026-02-10 at 12.49.24.jpeg",
     ],
     links: {
       ia: "https://pay.hotmart.com/J102529429C?off=u1dn6lqr",
-      prof: null, // não usa
+      prof: "https://pay.hotmart.com/K104372250V?off=13khtm5p",
     },
   },
 
   teresina: {
     onlyIA: false,
-    hero: "./assets/WhatsApp Image 2026-02-10 at 12.48.58.jpeg",
+    hero: "./assets/banner_teresina.jpg",
     covers: {
-      ia: "./assets/WhatsApp Image 2026-02-10 at 12.48.56.jpeg",
-      prof: "./assets/WhatsApp Image 2026-02-10 at 12.48.58.jpeg",
+      ia: "./assets/turma_img9.jpeg",
+      prof: "./assets/turma_img8.jpeg",
     },
     turmas: [
-      "./assets/WhatsApp Image 2026-02-10 at 12.48.55.jpeg",
-      "./assets/WhatsApp Image 2026-02-10 at 12.48.56.jpeg",
-      "./assets/turma_img2.jpeg",
-      "./assets/turma_img1.jpeg",
+      "./assets/turma_img10.jpeg",
+      "./assets/turma_img3.jpeg",
+      "./assets/turma_img4.jpeg",
+      "./assets/turma_img5.jpeg",
+      "./assets/turma_img6.jpeg",
     ],
     links: {
       ia: "https://pay.hotmart.com/H103769547I?off=sjlxt6zu",
@@ -93,18 +95,17 @@ const DATA = {
 
   fortaleza: {
     onlyIA: false,
-    hero: "./assets/WhatsApp Image 2026-02-10 at 12.48.58.jpeg",
+    hero: "./assets/banner_fortaleza.png",
     covers: {
       ia: "./assets/WhatsApp Image 2026-02-10 at 12.48.58.jpeg",
       prof: "./assets/WhatsApp Image 2026-02-10 at 12.49.24 (1).jpeg",
     },
     turmas: [
-      "./assets/WhatsApp Image 2026-02-10 at 12.48.55.jpeg",
+      "./assets/turma_img12.jpeg",
       "./assets/WhatsApp Image 2026-02-10 at 12.48.56.jpeg",
       "./assets/turma_img2.jpeg",
-      "./assets/turma_img1.jpeg",
     ],
-    
+
     links: {
       ia: "https://pay.hotmart.com/D104266233X?off=jk5niv0b",
       prof: "https://pay.hotmart.com/K104372250V?off=g3x038b1",
@@ -202,7 +203,7 @@ function applyLinks(cityData) {
     linkEls.prof.href = cityData.links.prof || "#";
     linkEls.prof.setAttribute(
       "aria-label",
-      "Inscrever-se em Professor IA na Prática"
+      "Inscrever-se em Professor IA na Prática",
     );
   }
 }
@@ -233,7 +234,7 @@ function buildCarousel(images, cityName) {
     ph.className = "img-placeholder img-placeholder--slide";
     ph.innerHTML = `<span>Foto da turma (${cityName}) ${String(i + 1).padStart(
       2,
-      "0"
+      "0",
     )}</span>`;
 
     const img = document.createElement("img");
@@ -320,7 +321,7 @@ function applyCity(city) {
     heroImg,
     heroPlaceholder,
     cityData.hero,
-    `Turma HubPrompt em ${cidade.name}`
+    `Turma HubPrompt em ${cidade.name}`,
   );
 
   // Capas dos cursos
@@ -328,7 +329,7 @@ function applyCity(city) {
     coversEls.ia.img,
     coversEls.ia.ph,
     cityData.covers?.ia,
-    `Capa IA na Prática - ${cidade.name}`
+    `Capa IA na Prática - ${cidade.name}`,
   );
 
   // Professor só se existir para cidade
@@ -337,7 +338,7 @@ function applyCity(city) {
       coversEls.prof.img,
       coversEls.prof.ph,
       cityData.covers?.prof,
-      `Capa Professor IA na Prática - ${cidade.name}`
+      `Capa Professor IA na Prática - ${cidade.name}`,
     );
   }
 
