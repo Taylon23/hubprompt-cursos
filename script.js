@@ -9,8 +9,8 @@ function cityLabel(city) {
     saoluis: {
       name: "São Luís",
       address: "Hotel PraiaBella, Av. Litorânea, 46 – Calhau",
-      date_ia: "28/03/2026",
-      date_prof: "29/03/2026",
+      date_ia: "16/05/2026",
+      date_prof: "Sem data",
     },
     teresina: {
       name: "Teresina",
